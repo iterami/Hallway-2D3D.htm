@@ -1,2 +1,1 @@
-Hallway
-=======
+Canvas-based hallway simulator.
