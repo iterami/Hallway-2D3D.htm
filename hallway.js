@@ -1,6 +1,7 @@
 function get(i){
     return document.getElementById(i)
 }
+
 function resize(){
     width = get('canvas').width = window.innerWidth;
     height = get('canvas').height = window.innerHeight;
@@ -23,13 +24,23 @@ function resize(){
     do{
         canvas.rotate(rotate);
         canvas.beginPath();
-        canvas.moveTo(0,0);
-        canvas.lineTo(width,width);
-        canvas.lineTo(-width,width);
+        canvas.moveTo(
+            0,
+            0
+        );
+        canvas.lineTo(
+            width,
+            width
+        );
+        canvas.lineTo(
+            -width,
+            width
+        );
         canvas.closePath();
         canvas.fill()
     }while(i--)
 }
+
 var canvas = get('canvas').getContext('2d');
 var height = 0;
 var i = 0;
