@@ -1,14 +1,11 @@
-function get(i){
-    return document.getElementById(i)
-}
-
 function resize(){
-    width = get('canvas').width = window.innerWidth;
-    height = get('canvas').height = window.innerHeight;
+    width = document.getElementById('canvas').width = window.innerWidth;
+    height = document.getElementById('canvas').height = window.innerHeight;
 
+    /* create gradient fillstyle for all walls */
     i = canvas.createLinearGradient(
         0,
-        height * .05,
+        height / 20,
         0,
         height
     );
@@ -16,13 +13,16 @@ function resize(){
     i.addColorStop(1, '#a99');
     canvas.fillStyle = i;
 
-    i = 3;
     canvas.translate(
         width / 2,
         height / 2
     );
+
+    /* rotate 90 degrees each time and draw a wall */
+    i = 3;
     do{
         canvas.rotate(rotate);
+
         canvas.beginPath();
         canvas.moveTo(
             0,
@@ -41,7 +41,7 @@ function resize(){
     }while(i--);
 }
 
-var canvas = get('canvas').getContext('2d');
+var canvas = document.getElementById('canvas').getContext('2d');
 var height = 0;
 var i = 0;
 var rotate = 90 * (Math.PI / 180);
