@@ -1,6 +1,9 @@
 function resize(){
-    width = document.getElementById('canvas').width = window.innerWidth;
-    height = document.getElementById('canvas').height = window.innerHeight;
+    width = window.innerWidth;
+    document.getElementById('canvas').width = width;
+
+    height = window.innerHeight;
+    document.getElementById('canvas').height = height;
 
     /* create gradient fillstyle for all walls */
     i = canvas.createLinearGradient(
