@@ -5,7 +5,7 @@ function resize(){
     height = window.innerHeight;
     document.getElementById('canvas').height = height;
 
-    /* create gradient fillstyle for all walls */
+    // create gradient fillstyle for all walls
     i = canvas.createLinearGradient(
         0,
         height / 20,
@@ -21,7 +21,7 @@ function resize(){
         height / 2
     );
 
-    /* rotate 90 degrees each time and draw a wall */
+    // rotate 90 degrees each time and draw a wall
     i = 3;
     do{
         canvas.rotate(rotate);
