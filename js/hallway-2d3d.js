@@ -51,6 +51,5 @@ function resize(){
 
 var canvas = document.getElementById('canvas').getContext('2d');
 
-resize();
-
+window.onload = resize;
 window.onresize = resize;
