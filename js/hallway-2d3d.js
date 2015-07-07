@@ -1,3 +1,5 @@
+'use strict';
+
 function resize(){
     document.getElementById('canvas').height = window.innerHeight;
     document.getElementById('canvas').width = window.innerWidth;
