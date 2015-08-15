@@ -51,7 +51,9 @@ function resize(){
     }while(loop_counter--);
 }
 
-var canvas = document.getElementById('canvas').getContext('2d');
+var canvas = document.getElementById('canvas').getContext('2d', {
+  'alpha': false,
+});
 
 window.onload = resize;
 window.onresize = resize;
