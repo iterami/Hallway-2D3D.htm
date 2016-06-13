@@ -1,6 +1,9 @@
 'use strict';
 
 function draw_logic(){
+    console.log(1);
+    buffer.save();
+
     // Create gradient fillstyle for all walls.
     var gradient = buffer.createLinearGradient(
       0,
@@ -45,6 +48,8 @@ function draw_logic(){
         buffer.closePath();
         buffer.fill();
     }while(loop_counter--);
+
+    buffer.restore();
 }
 
 function resize_logic(){
