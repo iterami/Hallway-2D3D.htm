@@ -1,15 +1,14 @@
 'use strict';
 
 function draw_logic(){
-    console.log(1);
-    buffer.save();
+    canvas_buffer.save();
 
     // Create gradient fillstyle for all walls.
-    var gradient = buffer.createLinearGradient(
+    var gradient = canvas_buffer.createLinearGradient(
       0,
-      window.innerHeight / 20,
+      canvas_height / 20,
       0,
-      window.innerHeight
+      canvas_height
     );
     gradient.addColorStop(
       0,
@@ -19,41 +18,41 @@ function draw_logic(){
       1,
       '#a99'
     );
-    buffer.fillStyle = gradient;
+    canvas_buffer.fillStyle = gradient;
 
-    buffer.translate(
-      x,
-      y
+    canvas_buffer.translate(
+      canvas_x,
+      canvas_y
     );
 
     // Rotate 90 degrees each time and draw a wall.
     var loop_counter = 3;
     var rotate_math = 90 * (Math.PI / 180);
     do{
-        buffer.rotate(rotate_math);
+        canvas_buffer.rotate(rotate_math);
 
-        buffer.beginPath();
-        buffer.moveTo(
+        canvas_buffer.beginPath();
+        canvas_buffer.moveTo(
           0,
           0
         );
-        buffer.lineTo(
-          width,
-          width
+        canvas_buffer.lineTo(
+          canvas_width,
+          canvas_width
         );
-        buffer.lineTo(
-          -width,
-          width
+        canvas_buffer.lineTo(
+          -canvas_width,
+          canvas_width
         );
-        buffer.closePath();
-        buffer.fill();
+        canvas_buffer.closePath();
+        canvas_buffer.fill();
     }while(loop_counter--);
 
-    buffer.restore();
+    canvas_buffer.restore();
 }
 
 function resize_logic(){
-    draw();
+    canvas_draw();
 }
 
-window.onload = init_canvas;
+window.onload = canvas_init;
