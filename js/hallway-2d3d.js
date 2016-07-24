@@ -27,7 +27,7 @@ function draw_logic(){
 
     // Rotate 90 degrees each time and draw a wall.
     var loop_counter = 3;
-    var rotate_math = 90 * (Math.PI / 180);
+    var rotate_math = 90 * math_degree;
     do{
         canvas_buffer.rotate(rotate_math);
 
