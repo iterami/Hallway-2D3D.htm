@@ -31,21 +31,24 @@ function draw_logic(){
     do{
         canvas_buffer.rotate(rotate_math);
 
-        canvas_buffer.beginPath();
-        canvas_buffer.moveTo(
-          0,
-          0
+        canvas_draw_path(
+          [
+            {
+              'type': 'moveTo',
+              'x': 0,
+              'y': 0,
+            },
+            {
+              'x': canvas_width,
+              'y': canvas_width,
+            },
+            {
+              'x': -canvas_width,
+              'y': canvas_width,
+            },
+          ],
+          {}
         );
-        canvas_buffer.lineTo(
-          canvas_width,
-          canvas_width
-        );
-        canvas_buffer.lineTo(
-          -canvas_width,
-          canvas_width
-        );
-        canvas_buffer.closePath();
-        canvas_buffer.fill();
     }while(loop_counter--);
 
     canvas_buffer.restore();
