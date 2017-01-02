@@ -31,8 +31,8 @@ function draw_logic(){
     do{
         canvas_buffer.rotate(rotate_math);
 
-        canvas_draw_path(
-          [
+        canvas_draw_path({
+          'vertices': [
             {
               'type': 'moveTo',
               'x': 0,
@@ -47,8 +47,7 @@ function draw_logic(){
               'y': canvas_width,
             },
           ],
-          {}
-        );
+        });
     }while(loop_counter--);
 
     canvas_buffer.restore();
