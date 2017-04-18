@@ -36,20 +36,17 @@ function draw_logic(){
 }
 
 function resize_logic(){
-    gradient = canvas_buffer.createLinearGradient(
-      0,
-      canvas_height / 20,
-      0,
-      canvas_height
-    );
-    gradient.addColorStop(
-      0,
-      '#000'
-    );
-    gradient.addColorStop(
-      1,
-      '#a99'
-    );
+    gradient = canvas_gradient({
+      'height': canvas_height,
+      'steps': [
+        {},
+        {
+          'color': '#a99',
+          'offset': 1,
+        },
+      ],
+      'y': canvas_height / 20,
+    });
     canvas_buffer.fillStyle = gradient;
 }
 
