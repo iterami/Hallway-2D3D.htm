@@ -38,7 +38,7 @@ function draw_logic(){
 function resize_logic(){
     gradient = canvas_gradient({
       'height': canvas_height,
-      'steps': [
+      'stops': [
         {},
         {
           'color': '#a99',
