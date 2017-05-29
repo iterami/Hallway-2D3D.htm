@@ -35,6 +35,10 @@ function draw_logic(){
     canvas_buffer.restore();
 }
 
+function repo_init(){
+    canvas_init();
+}
+
 function resize_logic(){
     gradient = canvas_gradient({
       'height': canvas_height,
@@ -52,5 +56,3 @@ function resize_logic(){
 
 var gradient = 0;
 var rotate_math = math_degree * 90;
-
-window.onload = canvas_init;
