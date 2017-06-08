@@ -36,6 +36,9 @@ function draw_logic(){
 }
 
 function repo_init(){
+    core_repo_init({
+      'title': 'Hallway-2D3D.htm',
+    });
     canvas_init();
 }
 
