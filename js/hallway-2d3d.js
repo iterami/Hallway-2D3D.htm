@@ -43,7 +43,7 @@ function repo_init(){
 }
 
 function resize_logic(){
-    gradient = canvas_gradient({
+    canvas_buffer.fillStyle = canvas_gradient({
       'height': canvas_height,
       'stops': [
         {},
@@ -54,8 +54,6 @@ function resize_logic(){
       ],
       'y': canvas_height / 20,
     });
-    canvas_buffer.fillStyle = gradient;
 }
 
-var gradient = 0;
 var rotate_math = math_degree * 90;
