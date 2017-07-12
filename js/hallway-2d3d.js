@@ -17,8 +17,6 @@ function draw_logic(){
           'vertices': [
             {
               'type': 'moveTo',
-              'x': 0,
-              'y': 0,
             },
             {
               'x': canvas_width,
