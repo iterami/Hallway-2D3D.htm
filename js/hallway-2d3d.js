@@ -41,16 +41,20 @@ function repo_init(){
 }
 
 function resize_logic(){
-    canvas_buffer.fillStyle = canvas_gradient({
-      'height': canvas_height,
-      'stops': [
-        {},
-        {
-          'color': '#a99',
-          'offset': 1,
-        },
-      ],
-      'y': canvas_height / 20,
+    canvas_setproperties({
+      'properties': {
+        'fillStyle': canvas_gradient({
+          'height': canvas_height,
+          'stops': [
+            {},
+            {
+              'color': '#a99',
+              'offset': 1,
+            },
+          ],
+          'y': canvas_height / 20,
+        }),
+      },
     });
 }
 
