@@ -19,12 +19,12 @@ function draw_logic(){
               'type': 'moveTo',
             },
             {
-              'x': canvas_width,
-              'y': canvas_width,
+              'x': canvas_properties['width'],
+              'y': canvas_properties['width'],
             },
             {
-              'x': -canvas_width,
-              'y': canvas_width,
+              'x': -canvas_properties['width'],
+              'y': canvas_properties['width'],
             },
           ],
         });
@@ -44,7 +44,7 @@ function resize_logic(){
     canvas_setproperties({
       'properties': {
         'fillStyle': canvas_gradient({
-          'height': canvas_height,
+          'height': canvas_properties['height'],
           'stops': [
             {},
             {
@@ -52,7 +52,7 @@ function resize_logic(){
               'offset': 1,
             },
           ],
-          'y': canvas_height / 20,
+          'y': canvas_properties['height'] / 20,
         }),
       },
     });
