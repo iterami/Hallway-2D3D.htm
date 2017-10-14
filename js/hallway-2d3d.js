@@ -4,8 +4,8 @@ function draw_logic(){
     canvas_buffer.save();
 
     canvas_buffer.translate(
-      canvas_x,
-      canvas_y
+      canvas_properties['width-half'],
+      canvas_properties['height-half']
     );
 
     // Rotate 90 degrees each time and draw a wall.
