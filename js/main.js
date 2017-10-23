@@ -35,6 +35,9 @@ function draw_logic(){
 
 function repo_init(){
     core_repo_init({
+      'globals': {
+        'rotate_math': math_degree * 90,
+      },
       'title': 'Hallway-2D3D.htm',
     });
     canvas_init();
@@ -57,5 +60,3 @@ function resize_logic(){
       },
     });
 }
-
-var rotate_math = math_degree * 90;
