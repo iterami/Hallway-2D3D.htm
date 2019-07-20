@@ -36,7 +36,7 @@ function draw_logic(){
 function repo_init(){
     core_repo_init({
       'globals': {
-        'rotate_math': core_degrees_to_radians({
+        'rotate_math': math_degrees_to_radians({
           'degrees': 90,
         }),
       },
