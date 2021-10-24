@@ -1,6 +1,6 @@
 'use strict';
 
-function draw_logic(){
+function repo_drawlogic(){
     canvas_buffer.save();
 
     canvas_buffer.translate(
@@ -45,7 +45,7 @@ function repo_init(){
     canvas_init();
 }
 
-function resize_logic(){
+function repo_resizelogic(){
     canvas_setproperties({
       'properties': {
         'fillStyle': canvas_gradient({
