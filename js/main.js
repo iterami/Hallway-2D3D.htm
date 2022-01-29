@@ -8,7 +8,6 @@ function repo_drawlogic(){
       canvas_properties['height-half']
     );
 
-    // Rotate 90 degrees each time and draw a wall.
     let loop_counter = 3;
     do{
         canvas_buffer.rotate(rotate_math);
