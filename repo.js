@@ -1,16 +1,16 @@
 'use strict';
 
 function repo_drawlogic(){
-    canvas_buffer.save();
+    canvas.save();
 
-    canvas_buffer.translate(
+    canvas.translate(
       canvas_properties['width-half'],
       canvas_properties['height-half']
     );
 
     let loop_counter = 3;
     do{
-        canvas_buffer.rotate(rotate_math);
+        canvas.rotate(rotate_math);
 
         canvas_draw_path({
           'vertices': [
@@ -29,7 +29,7 @@ function repo_drawlogic(){
         });
     }while(loop_counter--);
 
-    canvas_buffer.restore();
+    canvas.restore();
 }
 
 function repo_init(){
