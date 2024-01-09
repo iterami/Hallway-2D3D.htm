@@ -35,9 +35,7 @@ function repo_drawlogic(){
 function repo_init(){
     core_repo_init({
       'globals': {
-        'rotate_math': math_degrees_to_radians({
-          'degrees': 90,
-        }),
+        'rotate_math': math_degrees_to_radians(90),
       },
       'title': 'Hallway-2D3D.htm',
     });
