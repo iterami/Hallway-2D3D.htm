@@ -40,12 +40,6 @@ function repo_init(){
       'title': 'Hallway-2D3D.htm',
     });
     canvas_init();
-}
-
-function repo_logic(){
-}
-
-function repo_resizelogic(){
     canvas_setproperties({
       'properties': {
         'fillStyle': canvas_gradient({
@@ -61,4 +55,7 @@ function repo_resizelogic(){
         }),
       },
     });
+}
+
+function repo_logic(){
 }
