@@ -10,7 +10,7 @@ function repo_drawlogic(){
 
     let loop_counter = 3;
     do{
-        canvas.rotate(rotate_math);
+        canvas.rotate(1.5707963267948966);
 
         canvas_draw_path({
           'vertices': [
@@ -34,9 +34,6 @@ function repo_drawlogic(){
 
 function repo_init(){
     core_repo_init({
-      'globals': {
-        'rotate_math': math_degrees_to_radians(90),
-      },
       'title': 'Hallway-2D3D.htm',
     });
     canvas_init();
