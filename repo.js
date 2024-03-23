@@ -38,19 +38,17 @@ function repo_init(){
     });
     canvas_init();
     canvas_setproperties({
-      'properties': {
-        'fillStyle': canvas_gradient({
-          'height': canvas_properties['height'],
-          'stops': [
-            {},
-            {
-              'color': '#a99',
-              'offset': 1,
-            },
-          ],
-          'y': canvas_properties['height'] / 20,
-        }),
-      },
+      'fillStyle': canvas_gradient({
+        'height': canvas_properties['height'],
+        'stops': [
+          {},
+          {
+            'color': '#a99',
+            'offset': 1,
+          },
+        ],
+        'y': canvas_properties['height'] / 20,
+      }),
     });
 }
 
