@@ -14,17 +14,21 @@ function repo_drawlogic(){
 
         canvas_draw_path({
           'vertices': [
-            {
-              'type': 'moveTo',
-            },
-            {
-              'x': canvas_properties['width'],
-              'y': canvas_properties['width'],
-            },
-            {
-              'x': -canvas_properties['width'],
-              'y': canvas_properties['width'],
-            },
+            [
+              'moveTo',
+              0,
+              0,
+            ],
+            [
+              'lineTo',
+              canvas_properties['width'],
+              canvas_properties['width'],
+            ],
+            [
+              'lineTo',
+              -canvas_properties['width'],
+              canvas_properties['width'],
+            ],
           ],
         });
     }while(loop_counter--);
