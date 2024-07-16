@@ -43,7 +43,12 @@ function repo_init(){
     canvas_init();
     canvas_setproperties({
       'fillStyle': canvas_gradient({
-        'height': canvas_properties['height'],
+        'args': [
+          0,
+          canvas_properties['height'] / 20,
+          0,
+          canvas_properties['height'],
+        ],
         'stops': [
           {},
           {
@@ -51,7 +56,6 @@ function repo_init(){
             'offset': 1,
           },
         ],
-        'y': canvas_properties['height'] / 20,
       }),
     });
 }
