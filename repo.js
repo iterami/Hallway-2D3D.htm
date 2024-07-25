@@ -1,47 +1,7 @@
 'use strict';
 
 function repo_drawlogic(){
-    canvas.save();
-
-    canvas.translate(
-      canvas_properties['width-half'],
-      canvas_properties['height-half']
-    );
-
-    let loop_counter = 3;
-    do{
-        canvas.rotate(1.5707963267948966);
-
-        canvas_draw_path({
-          'vertices': [
-            [
-              'moveTo',
-              0,
-              0,
-            ],
-            [
-              'lineTo',
-              canvas_properties['width'],
-              canvas_properties['width'],
-            ],
-            [
-              'lineTo',
-              -canvas_properties['width'],
-              canvas_properties['width'],
-            ],
-          ],
-        });
-    }while(loop_counter--);
-
-    canvas.restore();
-}
-
-function repo_init(){
-    core_repo_init({
-      'title': 'Hallway-2D3D.htm',
-    });
-    canvas_init();
-    canvas_setproperties({
+    const properties = {
       'fillStyle': canvas_gradient({
         'args': [
           0,
@@ -57,6 +17,46 @@ function repo_init(){
           },
         ],
       }),
+    };
+
+    let loop_counter = 3;
+    do{
+        canvas_draw_path({
+          'properties': properties,
+          'translate': true,
+          'vertices': [
+            [
+              'moveTo',
+              0,
+              0,
+            ],
+            [
+              'rotate',
+              loop_counter * (Math.PI / 2),
+            ],
+            [
+              'lineTo',
+              canvas_properties['width-half'],
+              canvas_properties['width-half'],
+            ],
+            [
+              'lineTo',
+              -canvas_properties['width-half'],
+              canvas_properties['width-half'],
+            ],
+          ],
+          'x': canvas_properties['width-half'],
+          'y': canvas_properties['height-half'],
+        });
+    }while(loop_counter--);
+}
+
+function repo_init(){
+    core_repo_init({
+      'title': 'Hallway-2D3D.htm',
+    });
+    canvas_init({
+      'interval': false,
     });
 }
 
