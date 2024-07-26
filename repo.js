@@ -59,6 +59,3 @@ function repo_init(){
       'interval': false,
     });
 }
-
-function repo_logic(){
-}
