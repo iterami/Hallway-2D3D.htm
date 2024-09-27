@@ -19,6 +19,10 @@ function repo_drawlogic(){
       }),
     };
 
+    const side = Math.max(
+      canvas_properties['height-half'],
+      canvas_properties['width-half']
+    );
     let loop_counter = 3;
     do{
         canvas_draw_path({
@@ -36,13 +40,13 @@ function repo_drawlogic(){
             ],
             [
               'lineTo',
-              canvas_properties['width-half'],
-              canvas_properties['width-half'],
+              side,
+              side,
             ],
             [
               'lineTo',
-              -canvas_properties['width-half'],
-              canvas_properties['width-half'],
+              -side,
+              side,
             ],
           ],
           'x': canvas_properties['width-half'],
