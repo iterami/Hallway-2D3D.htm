@@ -5,9 +5,12 @@ function repo_drawlogic(){
       'fillStyle': canvas_gradient({
         'args': [
           0,
-          canvas_properties['height'] / 20,
+          canvas_properties['height'] / 100,
           0,
-          canvas_properties['height'],
+          Math.max(
+            canvas_properties['height'],
+            canvas_properties['width']
+          )
         ],
         'stops': [
           {},
