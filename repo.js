@@ -5,11 +5,11 @@ function repo_drawlogic(){
       'fillStyle': canvas_gradient({
         'args': [
           0,
-          canvas_properties['height'] / 100,
+          canvas_properties.height / 100,
           0,
           Math.max(
-            canvas_properties['height'],
-            canvas_properties['width']
+            canvas_properties.height,
+            canvas_properties.width
           )
         ],
         'stops': [
@@ -23,8 +23,8 @@ function repo_drawlogic(){
     };
 
     const side = Math.max(
-      canvas_properties['height-half'],
-      canvas_properties['width-half']
+      canvas_properties.height_half,
+      canvas_properties.width_half
     );
     let loop_counter = 3;
     do{
@@ -52,8 +52,8 @@ function repo_drawlogic(){
               side,
             ],
           ],
-          'x': canvas_properties['width-half'],
-          'y': canvas_properties['height-half'],
+          'x': canvas_properties.width_half,
+          'y': canvas_properties.height_half,
         });
     }while(loop_counter--);
 }
