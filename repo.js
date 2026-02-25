@@ -26,8 +26,7 @@ function repo_drawlogic(){
       canvas_properties.height_half,
       canvas_properties.width_half
     );
-    let loop_counter = 3;
-    do{
+    for(let i = 0; i < 4; i++){
         canvas_draw_path({
           'properties': properties,
           'translate': true,
@@ -39,7 +38,7 @@ function repo_drawlogic(){
             ],
             [
               'rotate',
-              loop_counter * (Math.PI / 2),
+              (Math.PI / 2) * i,
             ],
             [
               'lineTo',
@@ -55,7 +54,7 @@ function repo_drawlogic(){
           'x': canvas_properties.width_half,
           'y': canvas_properties.height_half,
         });
-    }while(loop_counter--);
+    }
 }
 
 function repo_init(){
