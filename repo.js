@@ -59,9 +59,11 @@ function repo_drawlogic(){
 
 function repo_init(){
     core_repo_init({
+      'menu': true,
       'title': 'Hallway-2D3D.htm',
     });
     canvas_init({
       'interval': false,
     });
+    canvas_draw();
 }
